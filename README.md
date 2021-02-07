@@ -7,5 +7,7 @@ To connect, you need a local ip ESP32, in the future I plan to complete the abil
 
 The library replicates most of the Serial functions from the original library.
 
-See Arduino ide examples for more information.
+See Arduino ide examples for more information. 
+
+To install the library, rename the folder to VLS_Esp32_Wifi_Terminal, and put it in the folder with your Arduino libraries
 
