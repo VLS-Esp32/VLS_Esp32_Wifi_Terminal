@@ -1,5 +1,5 @@
 # VLS_Esp32_Wifi_Terminal
-This is a library for arduino IDE for creating serial interface between ESP32 and pc, can work with esp8266, with kernel 2.3.0 and below.
+This is a library for Arduino IDE to create a simple and convenient serial interface between ESP32 and PC, via wifi , can work with esp8266, with kernel 2.3.0 and below.
 
 For monitoring, you need an application from the "soft" folder in the root directory of the library.
 
