@@ -1,0 +1,21 @@
+########################
+
+########################
+
+########################
+
+# VLS Wifi terminal keywords map
+
+########################
+
+########################
+
+########################
+
+VLS_Esp32_Wifi_Terminal KEYWORD1
+WifiTerminal KEYWORD2
+readAdress KEYWORD2
+print	KEYWORD2
+begin	KEYWORD2
+println	KEYWORD2
+WifiSerial KEYWORD1
