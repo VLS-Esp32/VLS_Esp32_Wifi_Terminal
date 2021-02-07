@@ -108,7 +108,7 @@ byte  WifiTerminal::read() {                     /////////////////////Read Byte
 
 byte WifiTerminal::readAdress(int adress){    ////////////// Read byte from adress
   Process();
-  if(adress >= _IncomingBufferCurrentPosition){
+  if(adress <= _IncomingBufferCurrentPosition){
      return IncommingBuffer[adress];
   }else{
     return 255;
