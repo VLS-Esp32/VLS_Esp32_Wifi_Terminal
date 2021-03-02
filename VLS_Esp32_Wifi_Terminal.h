@@ -1,5 +1,13 @@
+//////////////////////////
+// Esp 32 wifi serial. Created by VLS 
+// 10.01.21
+// v 1.0.5
+// https://github.com/VLS-Esp32/VLS_Esp32_Wifi_Terminal
+////////////////////////
+
 #pragma once
 #include <Arduino.h>
+#include <AsyncUDP.h>
 
 #ifdef ESP32
 #include <WiFi.h>
@@ -50,7 +58,8 @@ bool Connected=false;
  
 private:
 
-
+AsyncUDP udpServer;
+void SetUdpServer(int port);
 WiFiServer server;
 bool _WorkAlloved=false;
 byte IncommingBuffer[1024]; 

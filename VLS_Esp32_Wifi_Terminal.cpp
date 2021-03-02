@@ -1,9 +1,17 @@
+//////////////////////////
+// Esp 32 wifi serial. Created by VLS 
+// 10.01.21
+// v 1.0.5
+// https://github.com/VLS-Esp32/VLS_Esp32_Wifi_Terminal
+////////////////////////
+
 #include "VLS_Esp32_Wifi_Terminal.h"
 
 void  WifiTerminal::begin(int port) {     //////////////  Create a WiFi Server  
  if(WiFi.status() == WL_CONNECTED){
    server= WiFiServer(port);
    server.begin();
+    SetUdpServer(3283);
    _WorkAlloved=true;   // Allow the recipient to work
    Process();
   }  
@@ -231,4 +239,17 @@ if(Connected){
  }  
 }
 
-                                          
+  void WifiTerminal::SetUdpServer(int port){    //Set Up a Broadcast server
+    
+  if(udpServer.listen(port)) {
+    udpServer.onPacket([](AsyncUDPPacket packet) {  // Packet received 
+          
+            //reply to the client
+            if(packet.length()==21){  // Not a random packet?
+            packet.printf("I Am Esp 32!");
+           // Serial.print("YES"); // DEBUG!
+            }
+            
+        });    
+    }    
+   }                                      
